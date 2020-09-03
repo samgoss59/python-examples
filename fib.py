@@ -1,9 +1,14 @@
-def fibonacci(n=50):
-    result =[]
+def fibonacci(n=100000):
+    result= []
     a, b = 0, 1
-    while a< n:
-        result.append( a )
-        a, b = b,  a +b
-    return result
+    while a < n:
+        
+        a, b = b, a+b
+        if (a) % 2 == 0:
+            result.append( a )
+            continue
+            
+          
+    return result 
 
-sum ( fibonacci(50))
+print(" The sum of even fibonacci numbers less than 100,000 is:  " + str(sum(fibonacci())))
